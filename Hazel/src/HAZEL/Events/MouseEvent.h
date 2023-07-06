@@ -1,7 +1,5 @@
 #pragma once
 
-#pragma once
-
 #include"HAZEL/Core/MouseCodes.h"
 #include"HAZEL/Events/Event.h"
 

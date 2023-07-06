@@ -27,6 +27,12 @@
     <ClInclude Include="src\HAZEL\Core\KeyCodes.h">
       <Filter>HAZEL\Core</Filter>
     </ClInclude>
+    <ClInclude Include="src\HAZEL\Core\Layer.h">
+      <Filter>HAZEL\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\HAZEL\Core\LayerStack.h">
+      <Filter>HAZEL\Core</Filter>
+    </ClInclude>
     <ClInclude Include="src\HAZEL\Core\Log.h">
       <Filter>HAZEL\Core</Filter>
     </ClInclude>
@@ -60,6 +66,12 @@
   <ItemGroup>
     <ClCompile Include="src\HAZEL\Application.cpp">
       <Filter>HAZEL</Filter>
+    </ClCompile>
+    <ClCompile Include="src\HAZEL\Core\Layer.cpp">
+      <Filter>HAZEL\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\HAZEL\Core\LayerStack.cpp">
+      <Filter>HAZEL\Core</Filter>
     </ClCompile>
     <ClCompile Include="src\HAZEL\Core\Log.cpp">
       <Filter>HAZEL\Core</Filter>

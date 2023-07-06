@@ -1,7 +1,5 @@
 #pragma once
 
-
-
 #include<functional>
 
 namespace Hazel{
@@ -55,7 +53,6 @@ namespace Hazel{
 	};
 
 	class EventDispatcher {
-
 	public:
 		EventDispatcher(Event& event)
 			:mEvent(event) {

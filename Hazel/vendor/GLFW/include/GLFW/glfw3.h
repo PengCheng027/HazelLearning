@@ -212,7 +212,7 @@ extern "C" {
 
  #endif /*__APPLE__*/
 
-#elif !defined(GLFW_INCLUDE_NONE_) && \
+#elif !defined(GLFW_INCLUDE_NONE) && \
       !defined(__gl_h_) && \
       !defined(__gles1_gl_h_) && \
       !defined(__gles2_gl2_h_) && \

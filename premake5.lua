@@ -31,15 +31,12 @@ project "Hazel"
     {
         "%{prj.name}/src/HAZEL/Events/*.h",
         "%{prj.name}/src/HAZEL/Events/*.cpp",
-        "%{prj.name}/src/HAZEL/Core/KeyCodes.h",
-        "%{prj.name}/src/HAZEL/Core/MouseCodes.h",
-        "%{prj.name}/src/HAZEL/Core/Log.h",
-        "%{prj.name}/src/HAZEL/Core/Log.cpp",
+        "%{prj.name}/src/HAZEL/Core/*.h",
+        "%{prj.name}/src/HAZEL/Core/*.cpp",
         "%{prj.name}/src/HAZEL/*.h",
         "%{prj.name}/src/HAZEL/*.cpp",
         "%{prj.name}/src/*.h",
         "%{prj.name}/src/*.cpp",
-        "%{prj.name}/src/HAZEL/Core/Window.h",
         "%{prj.name}/src/Platform/Windows/*.h",
         "%{prj.name}/src/Platform/Windows/*.cpp"
     }
@@ -69,7 +66,6 @@ project "Hazel"
             "HZ_BUILD_DLL",
             "HZ_DEBUG",
             "_CRT_SECURE_NO_WARNINGS",
-            "GLFW_INCLUDE_NONE"
         }
 
         postbuildcommands
@@ -79,14 +75,17 @@ project "Hazel"
 
     filter "configurations:Debug"
         defines "HZ_DEBUG"
+        buildoptions "/MDd"
         symbols "On"
 
     filter "configurations:Release"   
         defines "HZ_RELEASE"
+        buildoptions "/MD"
         optimize "On"
 
     filter "configurations:Dist"
         defines "HZ_DIST"
+        buildoptions "/MD"
         optimize "On"
 
 
@@ -126,16 +125,17 @@ project "Sandbox"
             "HZ_PLATFORM_WINDOWS"
         }
 
-        
-
         filter "configurations:Debug"
             defines "HZ_DEBUG"
+            buildoptions "/MDd"
             symbols "On"
 
         filter "configurations:Release"   
             defines "HZ_RELEASE"
+            buildoptions "/MD"
             optimize "On"
 
         filter "configurations:Dist"
             defines "HZ_DIST"
+            buildoptions "/MD"
             optimize "On"
