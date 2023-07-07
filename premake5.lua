@@ -13,8 +13,12 @@ outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 -- Include directories relative to root folder (solution directory)
 IncludeDir = {}
 IncludeDir["GLFW"] = "Hazel/vendor/GLFW/include"
+IncludeDir["GLAD"] = "Hazel/vendor/GLAD/include"
+IncludeDir["ImGui"] = "Hazel/vendor/imgui"
 -- Include a premake5.lua file form this path
 include "Hazel/vendor/GLFW"
+include "Hazel/vendor/GLAD"
+include "Hazel/vendor/imgui"
 
 project "Hazel"
     location "Hazel"
@@ -45,12 +49,16 @@ project "Hazel"
     {
         "%{prj.name}/vendor/spdlog/include",
         "%{prj.name}/src",
-        "%{IncludeDir.GLFW}"
+        "%{IncludeDir.GLFW}",
+        "%{IncludeDir.GLAD}",
+        "%{IncludeDir.ImGui}"
     }
 
     links
     {
         "GLFW",
+        "GLAD",
+        "ImGui",
         "opengl32.lib"
     }
 
@@ -66,6 +74,7 @@ project "Hazel"
             "HZ_BUILD_DLL",
             "HZ_DEBUG",
             "_CRT_SECURE_NO_WARNINGS",
+            "GLFW_INCLUDE_NONE"
         }
 
         postbuildcommands

@@ -18,9 +18,6 @@
     <ClInclude Include="include\GLFW\glfw3native.h">
       <Filter>include\GLFW</Filter>
     </ClInclude>
-    <ClInclude Include="src\glfw_config.h">
-      <Filter>src</Filter>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\context.c">
@@ -68,5 +65,10 @@
     <ClCompile Include="src\window.c">
       <Filter>src</Filter>
     </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\glfw_config.h.in">
+      <Filter>src</Filter>
+    </None>
   </ItemGroup>
 </Project>

@@ -8,6 +8,8 @@
 
 #include"Platform/Windows/WindowsWindow.h"
 
+#include<glad/glad.h>
+
 namespace Hazel {
 	
 	static bool sGLFWInitialized = false;
@@ -55,6 +57,8 @@ namespace Hazel {
 			nullptr, nullptr); // this function will create a window pointer and context
 
 		glfwMakeContextCurrent(mWindow); // this function make the window in current context
+		int status = gladLoadGLLoader((GLADloadproc)glfwGetProcAddress);
+		HZ_CORE_ASSERT(status, "Faild to initialize Glad!");
 		glfwSetWindowUserPointer(mWindow, &mData); // set some information of window to use later
 		SetVSync(true);
 

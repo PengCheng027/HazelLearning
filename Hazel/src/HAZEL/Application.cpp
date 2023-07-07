@@ -4,14 +4,18 @@
 
 #include"HAZEL/Events/ApplicationEvent.h"
 
-#include<GLFW/glfw3.h>
-
+#include<glad/glad.h>
 
 namespace Hazel {
 
 	#define BIND_EVENT_FN(x) std::bind(&x,this,std::placeholders::_1)
 
+	Application* Application::sInstance = nullptr;
+
 	Application::Application() {
+
+		HZ_CORE_ASSERT(!sInstance, "Application already exists");
+		sInstance = this;
 
 		mWindow = std::unique_ptr<Window>(Window::Create());
 		mWindow->SetEventCallback(BIND_EVENT_FN(Application::OnEvent));
@@ -23,11 +27,13 @@ namespace Hazel {
 	void Application::PunshLayer(Layer* layer) {
 
 		mLayerStack.PushLayer(layer);
+		layer->OnAttach();
 	}
 
 	void Application::PunshOverlay(Layer* layer) {
 
 		mLayerStack.PushOverlay(layer);
+		layer->OnAttach();
 	}
 
 	// WindowsWindow's mData.EventCallback bind this function

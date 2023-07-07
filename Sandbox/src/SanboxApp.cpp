@@ -24,6 +24,7 @@ public:
 		// push a layer into Layer container, it always be there
 		// until be destroyed
 		PunshLayer(new ExampleLayer());
+		PunshLayer(new Hazel::ImGuiLayer());
 	}
 
 	~Sandbox() {

@@ -62,6 +62,9 @@
       <Filter>Platform\Windows</Filter>
     </ClInclude>
     <ClInclude Include="src\hzpch.h" />
+    <ClInclude Include="src\HAZEL\ImGui\ImGuiLayer.h" />
+    <ClInclude Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.h" />
+    <ClInclude Include="src\Platform\OpenGL\ImGuiOpenGLRendererLoad.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\HAZEL\Application.cpp">
@@ -80,5 +83,7 @@
       <Filter>Platform\Windows</Filter>
     </ClCompile>
     <ClCompile Include="src\hzpch.cpp" />
+    <ClCompile Include="src\HAZEL\ImGui\ImGuiLayer.cpp" />
+    <ClCompile Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.cpp" />
   </ItemGroup>
 </Project>

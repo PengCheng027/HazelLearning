@@ -1,5 +1,4 @@
 project "GLFW"
-    location "Hazel/vendor/GLFW"
     kind "StaticLib"
     language "C"
 

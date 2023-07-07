@@ -54,20 +54,20 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <OutDir>bin\Debug-windows-x86_64\GLFW\</OutDir>
-    <IntDir>bin-intermediate\Debug-windows-x86_64\GLFW\</IntDir>
+    <OutDir>..\..\..\bin\Debug-windows-x86_64\GLFW\</OutDir>
+    <IntDir>..\..\..\bin-intermediate\Debug-windows-x86_64\GLFW\</IntDir>
     <TargetName>GLFW</TargetName>
     <TargetExt>.lib</TargetExt>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <OutDir>bin\Release-windows-x86_64\GLFW\</OutDir>
-    <IntDir>bin-intermediate\Release-windows-x86_64\GLFW\</IntDir>
+    <OutDir>..\..\..\bin\Release-windows-x86_64\GLFW\</OutDir>
+    <IntDir>..\..\..\bin-intermediate\Release-windows-x86_64\GLFW\</IntDir>
     <TargetName>GLFW</TargetName>
     <TargetExt>.lib</TargetExt>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Dist|x64'">
-    <OutDir>bin\Dist-windows-x86_64\GLFW\</OutDir>
-    <IntDir>bin-intermediate\Dist-windows-x86_64\GLFW\</IntDir>
+    <OutDir>..\..\..\bin\Dist-windows-x86_64\GLFW\</OutDir>
+    <IntDir>..\..\..\bin-intermediate\Dist-windows-x86_64\GLFW\</IntDir>
     <TargetName>GLFW</TargetName>
     <TargetExt>.lib</TargetExt>
   </PropertyGroup>
@@ -121,7 +121,6 @@
   <ItemGroup>
     <ClInclude Include="include\GLFW\glfw3.h" />
     <ClInclude Include="include\GLFW\glfw3native.h" />
-    <ClInclude Include="src\glfw_config.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\context.c" />
@@ -139,6 +138,9 @@
     <ClCompile Include="src\win32_time.c" />
     <ClCompile Include="src\win32_window.c" />
     <ClCompile Include="src\window.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\glfw_config.h.in" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
